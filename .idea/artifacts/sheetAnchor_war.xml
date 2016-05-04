@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sheetAnchor:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="sheetAnchor-core-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="sheetAnchor:war exploded" />
+    </root>
+  </artifact>
+</component>
