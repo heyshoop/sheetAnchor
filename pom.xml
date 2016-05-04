@@ -8,37 +8,20 @@
   <groupId>cn.sheetanchor</groupId>
   <artifactId>sheetAnchor-core</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <properties>
-    <!-- spring版本号 -->
-    <spring.version>4.1.7.RELEASE</spring.version>
-    <!-- log4j日志文件管理包版本 -->
-    <slf4j.version>1.7.7</slf4j.version>
-    <log4j.version>1.2.17</log4j.version>
-  </properties>
-
-
-
   <dependencies>
     <!--springMVC-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
       <scope>compile</scope>
-      <version>${spring.version}</version>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${spring.version}</version>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <!--/////////////////////////////////////微信相关begin//////////////////////////////////// -->
-    <!--json-->
-    <dependency>
-      <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <version>2.4</version>
-
-    </dependency>
     <!--servlet相关-->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -72,7 +55,7 @@
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
+      <version>1.2.17</version>
     </dependency>
 
 
@@ -87,16 +70,106 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
+      <version>1.7.7</version>
     </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>${slf4j.version}</version>
+      <version>1.7.7</version>
     </dependency>
 
     <!--/////////////////////////////////////微信相关end//////////////////////////////////// -->
+    <!--/////////////////////////////////////博客相关begin//////////////////////////////////// -->
+    <!--Jackson相关-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.4.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.4.4</version>
+    </dependency>
+    <!--上传相关-->
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.1</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    <!--velocity视图相关-->
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity</artifactId>
+      <version>1.7</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity-tools</artifactId>
+      <version>2.0</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.struts</groupId>
+          <artifactId>struts-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.struts</groupId>
+          <artifactId>struts-taglib</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.struts</groupId>
+          <artifactId>struts-tiles</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!--Apache shiro相关-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-web</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+    <dependency>
+    <groupId>org.apache.shiro</groupId>
+    <artifactId>shiro-spring</artifactId>
+    <version>1.2.1</version>
+   </dependency>
+    <!-- mblog相关-->
+    <dependency>
+      <groupId>com.mtons.mblog</groupId>
+      <artifactId>mblog-api</artifactId>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mblog-api-1.1.3.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.mtons.mblog</groupId>
+      <artifactId>mblog-core</artifactId>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mblog-core-0.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.mtons.mblog</groupId>
+      <artifactId>mblog-plugin-example</artifactId>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mblog-plugin-example-0.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.mtons.mblog</groupId>
+      <artifactId>mblog-base</artifactId>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/mblog-base-0.0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <!--/////////////////////////////////////博客相关end//////////////////////////////////// -->
 
 
 
